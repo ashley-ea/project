@@ -197,7 +197,7 @@ all_wines <- wine_data_coords %>%
   left_join(geocoded_locations, by = c("province", "country")) %>%
   filter(!is.na(lat) & !is.na(lon))
 
-google_map(key = "AIzaSyAKaci5MqwL9rXrMgd8XBXfa1KEDjRghPk") %>%
+google_map(key = '') %>%
   add_heatmap(
     data = all_wines,
     lat = "lat",
