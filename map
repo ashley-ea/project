@@ -180,9 +180,7 @@ unique_locations <- wine_data_coords %>%
   distinct() %>%
   mutate(location = paste(province, country, sep = ", ")) 
 
-#set api key
-register_google(key = "AIzaSyAKaci5MqwL9rXrMgd8XBXfa1KEDjRghPk")
-googleway::set_key("AIzaSyAKaci5MqwL9rXrMgd8XBXfa1KEDjRghPk")
+
 
 #geocode unique locations (will take a while to run)
 geocoded_locations <- unique_locations %>%
